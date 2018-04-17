@@ -1,5 +1,20 @@
 # CSS Fundamentals
 
+These are just a bunch of rather basic CSS-related interview questions.
+
+1. [Box Model](#box-model)
+2. [Element Positioning](#element-positioning)
+3. [Selectors](#selectors)
+4. [Units](#units)
+5. [Filters, Transformations and Transitions](#filters-transformations-and-transitions)
+6. [Specificity](#specificity)
+7. [Miscellaneous](#misc)
+8. [Responsive Web Design](#responsive-web-design)
+9. [CSS Tools and Workflows](#css-tools-and-workflows)
+10. [Organising CSS](#organising-css)
+
+---
+
 ## Box Model
 
 ### What's the CSS box model hierarchy?
@@ -229,7 +244,7 @@ The `:nth-child` selector means select an element provided it's a paragraph AND 
 
 These are pseudo elements which allows you to insert content onto a page from CSS (without it needing to be in the HTML). Note that **the end result is not actually in the DOM**. Check [this blog entry](http://krasimirtsonev.com/blog/article/CSS-before-and-after-pseudo-elements-in-practice) to see some ideas on how to use these pseudo elements.
 
-Note that self-closing elements such as <img />, <input /> and <hr /> can't have pseudo-elements attached to them.
+Note that self-closing elements such as `<img />`, `<input />` and `<hr />` can't have pseudo-elements attached to them.
 
 ### `:` vs `::`
 
@@ -345,6 +360,8 @@ Most common timing functions are `ease`, `linear`, `ease-in`, `ease-out`, `ease-
 
 [This](http://webdesign.tutsplus.com/articles/css3-transitions-and-transforms-from-scratch--webdesign-4975) is a great resource to learn about both transitions and transforms.
 
+## Specificity
+
 ### What is specificity? How do you calculate specificity?
 
 The different weight of selectors is usually the reason why your CSS rules don't apply to some elements, although you think they should have. I
@@ -366,9 +383,9 @@ For more info and examples check the [CSS Specificity Wars](http://www.stuffandn
 
 `:placeholder-shown` is used to select the input field itself when its placeholder is being shown. `::placeholder`, on the other hand, styles the placeholder text.
 
-[Imgur](https://i.imgur.com/yLR14ZA.png)
+![Styling Placeholders](https://i.imgur.com/yLR14ZA.png)
 
-## Responsive Web Design (RWD)
+## Responsive Web Design
 
 ### What's RWD?
 
@@ -572,8 +589,8 @@ Take this searchform example:
 
 ```html
 <form class="site-search  full">
-    <input type="text" class="field">
-    <input type="Submit" value ="Search" class="button">
+  <input type="text" class="field">
+  <input type="Submit" value ="Search" class="button">
 </form>
 ```
 
@@ -581,8 +598,8 @@ These classes are fairly loose, and don't tell us much. Even though we can work 
 
 ```html
 <form class="site-search  site-search--full">
-    <input type="text" class="site-search__field">
-    <input type="Submit" value ="Search" class="site-search__button">
+  <input type="text" class="site-search__field">
+  <input type="Submit" value ="Search" class="site-search__button">
 </form>
 ```
 
